@@ -1,0 +1,72 @@
+/* Basic reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for a techy feel */
+    background-color: #1a1a1a; /* Dark background for mystery */
+    color: #f0f0f0; /* Light text for contrast */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Darker header */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+}
+
+nav ul li {
+    display: inline; /* Horizontal list */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f0f0f0; /* Light text for links */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Section styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #444; /* Subtle border for sections */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Terminal styles */
+#terminal {
+    background-color: #222; /* Dark terminal background */
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+#commandInput {
+    width: 80%; /* Input field width */
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #333; /* Input background */
+    color: #f0f0f0; /* Input text color */
+    border: 1px solid #444; /* Input border */
+}
+
+#output {
+    margin-top: 10px; /* Space above output */
+    color: #00ff00; /* Green text for terminal output */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+}

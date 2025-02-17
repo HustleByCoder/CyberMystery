@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberMystery - Linux Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>CyberMystery Linux Mastery Course</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="cli-tools.html">CLI Tools</a></li>
+                <li><a href="linux-course.html">Linux Course</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="course-intro">
+        <h2>Welcome to the Linux Mastery Course</h2>
+        <p>Linux is the foundation of cybersecurity, ethical hacking, and system administration. Whether you're a beginner or an advanced user, this course will take you from the basics to expert-level Linux operations.</p>
+    </section>
+
+    <section id="modules">
+        <div class="module-container">
+            <div class="module active">
+                <h3>Module 1: Introduction to Linux</h3>
+                <p>Understand the history and importance of Linux. Learn about distributions, the kernel, and why Linux is the go-to OS for cybersecurity professionals.</p>
+            </div>
+            <div class="module">
+                <h3>Module 2: Linux Installation & Setup</h3>
+                <p>Step-by-step guide on installing Linux (Ubuntu, Kali, or Arch). Learn about dual-booting, virtual machines, and live USBs.</p>
+            </div>
+            <div class="module">
+                <h3>Module 3: The Linux File System</h3>
+                <p>Explore the structure of Linux directories, file permissions, and how data is managed in Linux.</p>
+            </div>
+            <div class="module">
+                <h3>Module 4: Command Line Mastery</h3>
+                <p>Master essential Linux commands, shell scripting, and automation techniques for efficiency.</p>
+            </div>
+            <div class="module">
+                <h3>Module 5: User Management & Permissions</h3>
+                <p>Understand user roles, permissions, sudo privileges, and how to secure user accounts.</p>
+            </div>
+            <div class="module">
+                <h3>Module 6: Networking in Linux</h3>
+                <p>Dive into network configuration, troubleshooting, and security tools like Nmap, Netcat, and Wireshark.</p>
+            </div>
+            <div class="module">
+                <h3>Module 7: Linux Security & Hardening</h3>
+                <p>Learn security best practices, firewalls, SSH security, and intrusion detection systems.</p>
+            </div>
+            <div class="module">
+                <h3>Module 8: Bash Scripting & Automation</h3>
+                <p>Write powerful Bash scripts to automate repetitive tasks and enhance productivity.</p>
+            </div>
+            <div class="module">
+                <h3>Module 9: Linux for Ethical Hackers</h3>
+                <p>Use Linux for penetration testing, exploit development, and security auditing.</p>
+            </div>
+            <div class="module">
+                <h3>Module 10: Advanced Linux Administration</h3>
+                <p>Manage servers, configure services, and optimize system performance like a pro.</p>
+            </div>
+        </div>
+        <button id="prev-btn">← Previous</button>
+        <button id="next-btn">Next →</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CyberMystery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let currentModule = 0;
+            const modules = document.querySelectorAll(".module");
+            const nextBtn = document.getElementById("next-btn");
+            const prevBtn = document.getElementById("prev-btn");
+            
+            function showModule(index) {
+                modules.forEach((module, i) => {
+                    module.style.display = i === index ? "block" : "none";
+                });
+            }
+            
+            showModule(currentModule);
+            
+            nextBtn.addEventListener("click", () => {
+                if (currentModule < modules.length - 1) {
+                    currentModule++;
+                    showModule(currentModule);
+                }
+            });
+            
+            prevBtn.addEventListener("click", () => {
+                if (currentModule > 0) {
+                    currentModule--;
+                    showModule(currentModule);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
